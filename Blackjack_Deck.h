@@ -1,3 +1,6 @@
+#include <string>
+using namespace std;
+
 #define DECK_SIZE 4
 
 class Blackjack_Deck
@@ -9,7 +12,7 @@ public:
 	//Constructor initializes the deck.
 	Blackjack_Deck()
 	{
-		deck[] = {"Spades", "Hearts", "Clubs", "Diamonds"}; 
+		deck[DECK_SIZE] = {"Spades", "Hearts", "Clubs", "Diamonds"}; 
 	}
 
 	//Generates a random deck and returns for Card generation

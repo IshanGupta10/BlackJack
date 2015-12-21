@@ -9,14 +9,14 @@ public:
 	//Constructor initializes the cards.
 	Blackjack_Cards()
 	{
-		card[] = {'A', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'};
+		cards[CARD_SIZE] = {'A', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'};
 	}
 
 	//Generates a random card and returns for Card generation
 	char generateCard()
 	{
 		int random_card = rand() % 13;
-		return card[random_card];
+		return cards[random_card];
 	}
 
 	int cardValue(char card)

@@ -1,11 +1,11 @@
 #include <iostream>
-#include <conio>
+//#include <conio.h>
 #include <cstdlib>
 #include <map>
 #include <utility>
 // #include <Blackjack_Cards.h>
 // #include <Blackjack_Deck.h>
-#include <Blackjack_Engine.h>
+#include "Blackjack_Engine.h"
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 	{
 		cout<<"Please enter your name: ";
 		cin>>player;
-		clrscr();
+		//clrscr();
 		
 		cout<<"\t \t Welcome to the BlackJack!!! \n \n";
 		cout<<"The rules are standard. Let us begin.\n";
@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
 
 
 		//To start a new game, enter a choice ~~~
-		cout<<"A new game?(Y/N) : "
+		cout<<"A new game?(Y/N) : ";
 		cin>>new_game;
 	}while(new_game == 'y' || new_game == 'Y');
 	

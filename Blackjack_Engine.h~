@@ -1,9 +1,5 @@
-#include <map>
-#include <utility>
-#include <string>
-
-#include "Blackjack_Cards.h"
-#include "Blackjack_Deck.h"
+#include <Blackjack_Cards.h>
+#include <Blackjack_Deck.h>
 
 map<pair<char,string>, bool> used_cards;
 
@@ -12,14 +8,13 @@ class Blackjack_Engine
 	char card;
 	int player_value = 0, dealer_value = 0;
 	int  i = 0;
-	
 	pair<string,char> dealer[4],players[4];
 	string player,decks;
-	
-	Blackjack_Deck deck;
-	Blackjack_Cards cards;
 
 public:
+
+	Blackjack_Deck deck;
+	Blackjack_Cards cards;
 	
 	Blackjack_Engine()
 	{
