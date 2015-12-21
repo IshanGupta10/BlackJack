@@ -2,14 +2,15 @@
 
 class Blackjack_Cards
 {
-	char cards[CARD_SIZE];
+	//char cards[CARD_SIZE];
 
 public:
 
+	char cards[CARD_SIZE] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'};
 	//Constructor initializes the cards.
 	Blackjack_Cards()
 	{
-		cards[CARD_SIZE] = {'A', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'};
+	//	cards = {'A', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'};
 	}
 
 	//Generates a random card and returns for Card generation

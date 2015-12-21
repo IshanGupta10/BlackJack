@@ -13,7 +13,7 @@ class Blackjack_Engine
 	int player_value = 0, dealer_value = 0;
 	int  i = 0;
 	
-	pair<string,char> dealer[4],players[4];
+	pair<char,string> dealer[4],players[4];
 	string player,decks;
 	
 	Blackjack_Deck deck;
@@ -36,7 +36,7 @@ public:
 
 	}
 
-	bool handChecker(pair<string,char> check)
+	bool handChecker(pair<char,string> check)
 	{
 		if(used_cards.find(check) != used_cards.end())
 			return true;
@@ -51,7 +51,7 @@ public:
 		{
 			card = cards.generateCard();
 			decks = deck.getDeck();
-			dealer[i] = make_pair(decks,card);
+			dealer[i] = make_pair(card,decks);
 			if(handChecker(dealer[i]))
 			{
 				if(i == 0)
@@ -72,7 +72,7 @@ public:
 		{
 			card = cards.generateCard();
 			decks = deck.getDeck();
-			players[i] = make_pair(decks,card);
+			players[i] = make_pair(card,decks);
 			if(handChecker(players[i]))
 			{
 				if(i == 0)

@@ -5,14 +5,14 @@ using namespace std;
 
 class Blackjack_Deck
 {
-	string deck[DECK_SIZE];			//For the different decks
+	//string deck[DECK_SIZE];			//For the different decks
 
 public:
-	
+	string deck[DECK_SIZE] = {"Spades", "Hearts", "Clubs", "Diamonds"};
 	//Constructor initializes the deck.
 	Blackjack_Deck()
 	{
-		deck[DECK_SIZE] = {"Spades", "Hearts", "Clubs", "Diamonds"}; 
+	//	deck = {"Spades", "Hearts", "Clubs", "Diamonds"}; 
 	}
 
 	//Generates a random deck and returns for Card generation
