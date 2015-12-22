@@ -22,7 +22,7 @@ public:
 		return deck[random_deck];
 	}
 
-	~Blackjack_Deck();
+//	~Blackjack_Deck();
 
 	/* data */
 };

@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 		cout<<"The rules are standard. Let us begin.\n";
 		
 		cout<<"Dealing first two cards - - - \n";
-		Blackjack_Engine game();
+		Blackjack_Engine game(new_game);
 
 		//To start a new game, enter a choice ~~~
 		cout<<"A new game?(Y/N) : ";

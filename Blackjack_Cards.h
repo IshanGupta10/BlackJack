@@ -30,7 +30,7 @@ public:
 			return -1;
 	}
 
-	~Blackjack_Cards();
+//	~Blackjack_Cards();
 
 	/* data */
 };

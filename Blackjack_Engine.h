@@ -9,6 +9,8 @@ map<pair<char,string>, bool> used_cards;
 
 class Blackjack_Engine
 {
+	public:
+	
 	char card;
 	int player_value = 0, dealer_value = 0;
 	int  i = 0;
@@ -18,11 +20,10 @@ class Blackjack_Engine
 	
 	Blackjack_Deck deck;
 	Blackjack_Cards cards;
-
-public:
 	
-	Blackjack_Engine()
+	Blackjack_Engine(char x)
 	{
+		//cout<<"Reached Here "<<'\n';
 		startGame();
 	}
 
@@ -88,8 +89,7 @@ public:
 		}
 	}
 
-
-	~Blackjack_Engine();
+//	~Blackjack_Engine();
 
 	/* data */
 };

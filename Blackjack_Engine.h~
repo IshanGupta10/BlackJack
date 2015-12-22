@@ -9,20 +9,21 @@ map<pair<char,string>, bool> used_cards;
 
 class Blackjack_Engine
 {
+	public:
+	
 	char card;
 	int player_value = 0, dealer_value = 0;
 	int  i = 0;
 	
-	pair<string,char> dealer[4],players[4];
+	pair<char,string> dealer[4],players[4];
 	string player,decks;
 	
 	Blackjack_Deck deck;
 	Blackjack_Cards cards;
-
-public:
 	
-	Blackjack_Engine()
+	Blackjack_Engine(char x)
 	{
+		cout<<"Reached Here "<<'\n';
 		startGame();
 	}
 
@@ -36,7 +37,7 @@ public:
 
 	}
 
-	bool handChecker(pair<string,char> check)
+	bool handChecker(pair<char,string> check)
 	{
 		if(used_cards.find(check) != used_cards.end())
 			return true;
@@ -51,7 +52,7 @@ public:
 		{
 			card = cards.generateCard();
 			decks = deck.getDeck();
-			dealer[i] = make_pair(decks,card);
+			dealer[i] = make_pair(card,decks);
 			if(handChecker(dealer[i]))
 			{
 				if(i == 0)
@@ -72,7 +73,7 @@ public:
 		{
 			card = cards.generateCard();
 			decks = deck.getDeck();
-			players[i] = make_pair(decks,card);
+			players[i] = make_pair(card,decks);
 			if(handChecker(players[i]))
 			{
 				if(i == 0)
@@ -88,8 +89,7 @@ public:
 		}
 	}
 
-
-	~Blackjack_Engine();
+//	~Blackjack_Engine();
 
 	/* data */
 };
