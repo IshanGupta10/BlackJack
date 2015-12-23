@@ -47,7 +47,7 @@ class Blackjack_Engine
 
 	void startGame()
 	{
-		
+		//cout<<"Now Here "<<'\n';
 		while(i<2)
 		{
 			card = cards.generateCard();
@@ -66,7 +66,9 @@ class Blackjack_Engine
 				i++;
 			}
 		}
-
+		//cout<<"Dealer's cards "<<'\n';
+		//cout<<dealer[0].first<<" "<<dealer[0].second<<" ";
+		//cout<<dealer[1].first<<" "<<dealer[1].second<<'\n';
 		i = 0;
 
 		while(i<2)
@@ -87,6 +89,9 @@ class Blackjack_Engine
 				i++;
 			}
 		}
+		//cout<<"Player's cards "<<'\n';
+		//cout<<players[0].first<<" "<<players[0].second<<" ";
+		//cout<<players[1].first<<" "<<players[1].second<<'\n';
 	}
 
 //	~Blackjack_Engine();

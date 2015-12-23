@@ -47,7 +47,7 @@ class Blackjack_Engine
 
 	void startGame()
 	{
-		
+		cout<<"Now Here "<<'\n';
 		while(i<2)
 		{
 			card = cards.generateCard();
