@@ -6,7 +6,7 @@ class Blackjack_Cards
 
 public:
 
-	char cards[CARD_SIZE] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'};
+	char cards[CARD_SIZE] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'X', 'J', 'Q', 'K'};
 	//Constructor initializes the cards.
 	Blackjack_Cards()
 	{
@@ -22,15 +22,15 @@ public:
 
 	int cardValue(char card)
 	{
-		if(card >= '2' && card <= '10')
+		if(card >= '2' && card <= '9')
 			return card - '0';
-		else if(card == 'J' || card == 'Q' || card == 'K')
+		else if(card == 'J' || card == 'Q' || card == 'K' || card == 'X')
 			return 10; 
+		else if(card == 'A')
+			return 11;
 		else
-			return -1;
+			return 0;
 	}
 
 //	~Blackjack_Cards();
-
-	/* data */
 };

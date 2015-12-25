@@ -23,6 +23,4 @@ public:
 	}
 
 //	~Blackjack_Deck();
-
-	/* data */
 };
