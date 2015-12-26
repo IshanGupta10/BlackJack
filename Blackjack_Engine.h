@@ -5,7 +5,7 @@
 #include "Blackjack_Cards.h"
 #include "Blackjack_Deck.h"
 
-map<pair<char,string>, bool> used_cards;
+map<pair<char,string>, bool> used_cards;		//HashMap used to check uniqeness of the drawn hand
 
 class Blackjack_Engine
 {
@@ -40,8 +40,7 @@ class Blackjack_Engine
 
 	Blackjack_Engine(string x)
 	{
-		//cout<<"Reached Here "<<'\n';
-        player = x;
+		player = x;
         player_value = 0;
         dealer_value = 0;
         i = 0;
@@ -172,7 +171,7 @@ class Blackjack_Engine
 
 	bool findWinner()
 	{
-		return dealer_value >= player_value ? true:false;
+		return dealer_value >= player_value ? true : false;
 	}
 
 	/*
